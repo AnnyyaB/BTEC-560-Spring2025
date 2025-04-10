@@ -1,4 +1,4 @@
-# Author: A'nnyya Bryant; Date: 04/08/2025; Purpose: T-Test
+# Author: A'nnyya Bryant; Date: 04/10/2025; Purpose: T-Test
 
 # Generate some dumy datasets for comparisons
 x = rnorm(10)
@@ -10,7 +10,6 @@ plot(pts,dt(pts,df=9),col='red',type='l')
 lines(density(x), col='green')
 lines(density(y), col='blue')
 
-
 # Apply the T-Test Function
 ttest = t.test(x,y)
 ttest
@@ -18,10 +17,14 @@ ttest
 Welch Two Sample t-test
 
 data:  x and y
-t = -0.062519, df = 16.439, p-value = 0.9509
+t = -1.9541, df = 16.596, p-value = 0.06776
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -0.8602823  0.8108901
+ -1.09399606  0.04293811
 sample estimates:
  mean of x  mean of y 
-0.04650803 0.07120410 
+-0.3093128  0.2162162 
+
+p-value = 0.06776
+
+# Groups x and y are not significantly different because the p-value is more that 0.5.
